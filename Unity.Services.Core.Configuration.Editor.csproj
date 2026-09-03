@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.16</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.17</UnityProjectGeneratorVersion>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2022.1.24f1</UnityVersion>
@@ -56,16 +56,18 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.6.0\Editor\Core\Configuration\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.6.0\Editor\Core\Configuration\ConfigurationBuilder.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.6.0\Editor\Core\Configuration\IConfigurationProvider.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.6.0\Editor\Core\Configuration\ProjectConfigurationBuilder.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.6.0\Editor\Core\Configuration\Utils\IoUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.6.0\Editor\Core\Configuration\ProjectConfigurationBuildInjectorWithPlayerProcessor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.6.0\Editor\Core\Configuration\ProjectConfigurationBuildInjectorWithReport.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.8.1\Editor\Core\Configuration\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.8.1\Editor\Core\Configuration\ConfigurationBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.8.1\Editor\Core\Configuration\IConfigurationProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.8.1\Editor\Core\Configuration\ProjectConfigurationBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.8.1\Editor\Core\Configuration\Utils\IoUtils.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.8.1\Editor\Core\Configuration\Utils\AssetUtils.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.8.1\Editor\Core\Configuration\ProjectConfigurationBuildInjectorWithPlayerProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.8.1\Editor\Core\Configuration\ProjectConfigurationBuilderHelper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.8.1\Editor\Core\Configuration\ProjectConfigurationBuildInjectorWithReport.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.services.core@1.6.0\Editor\Core\Configuration\Unity.Services.Core.Configuration.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.services.core@1.8.1\Editor\Core\Configuration\Unity.Services.Core.Configuration.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -338,20 +340,11 @@
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.4\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
@@ -368,20 +361,14 @@
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.1.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library\PackageCache\com.unity.ext.nunit@2.0.3\net40\unity-custom\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.10.2\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>D:\Program Files\Unity 2022.1.24f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -784,13 +771,13 @@
       <Project>{51B60D6D-6E29-C7CF-A16D-7B514582176E}</Project>
       <Name>Unity.Services.Core.Internal</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{9698CB8D-D6A1-C8C5-4536-6905D1ECDBEA}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
       <Project>{79F1FE73-AA25-8496-BFA0-E4E7E9FF6A39}</Project>
       <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{9698CB8D-D6A1-C8C5-4536-6905D1ECDBEA}</Project>
+      <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
