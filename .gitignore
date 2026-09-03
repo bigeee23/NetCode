@@ -1,4 +1,4 @@
-# Unity 缓存和库文件
+# Unity缓存和库文件
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -7,9 +7,15 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 /UserSettings/
+/Logs/
+
+# IDE配置
 /.idea/
 /.vs/
-/Logs/
+
+# 自动生成C#工程文件
+*.csproj
+*.sln
 
 # 打包输出
 *.apk
